@@ -1,4 +1,5 @@
 import "./Item.css";
+import canasto from "../assets/canasto.svg";
 
 function Item(props) {
   return (
@@ -13,7 +14,10 @@ function Item(props) {
           <h3 className="item-name">{props.title}</h3>
           <p className="item-description">{props.description}</p>
         </a>
-        <button className="item-button">Agregar al carrito</button>
+        <button className="item-button">
+          <img src={canasto} alt="Canasto" />
+          Agregar al carrito
+        </button>
       </div>
     </>
   );

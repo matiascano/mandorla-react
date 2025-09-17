@@ -13,8 +13,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  top: -5px;
-  right: -10px;
+  top: -2px;
+  right: -5px;
   background-color: var(--primary-color);
   color: var(--white);
   font-size: 0.8rem;
@@ -22,6 +22,13 @@
   height: 18px;
   border-radius: 50%;
 }
+
+.cart-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .cart-count.hidden {
   display: none;
 }
