@@ -4,13 +4,15 @@ function Item(props) {
   return (
     <>
       <div className="item">
-        <img src={props.image} alt={props.title} className="item-image" />
-        <p className="item-category">{props.category}</p>
         <a href="#">
+          <img src={props.image} alt={props.title} className="item-image" />
+          <header className="item-header">
+            <span className="item-price">${props.price}</span>
+            <span className="item-category">{props.category}</span>
+          </header>
           <h3 className="item-name">{props.title}</h3>
+          <p className="item-description">{props.description}</p>
         </a>
-        <p className="item-description">{props.description}</p>
-        <p className="item-price">${props.price}</p>
         <button className="item-button">Agregar al carrito</button>
       </div>
     </>
