@@ -1,0 +1,20 @@
+.hero {
+  /* background-image: url("./assets/hero-background.webp"); */
+  background-color: bisque;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 1.5rem;
+  max-width: 600px;
+}

@@ -1,0 +1,37 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .left {
+  display: flex;
+  align-items: center;
+}
+
+header .left img {
+  height: 80px;
+  margin-right: 10px;
+}
+
+header .right {
+  display: flex;
+  gap: 2rem;
+}
+
+header nav {
+  display: flex;
+  gap: 15px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}

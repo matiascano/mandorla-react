@@ -1,0 +1,43 @@
+.item {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.2s;
+  max-width: 300px;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.item-image {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.item-name {
+  font-size: 1.2em;
+  margin: 12px 0 8px;
+}
+
+.item-price {
+  color: #888;
+  font-size: 1.1em;
+}
+.item-description {
+  font-size: 0.9em;
+  color: #555;
+}
+.item button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.item button:hover {
+  background-color: #45a049;
+}
