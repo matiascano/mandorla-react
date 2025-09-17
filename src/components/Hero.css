@@ -1,6 +1,5 @@
 .hero {
-  /* background-image: url("./assets/hero-background.webp"); */
-  background-color: var(--primary-color-dark);
+  background: var(--gradient);
   background-size: cover;
   background-position: center;
   height: 400px;

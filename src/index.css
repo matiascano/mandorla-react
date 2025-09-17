@@ -11,6 +11,16 @@
   --black: #111;
   --box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  --gradient: linear-gradient(
+    90deg,
+    var(--primary-color) 0%,
+    var(--primary-color-light) 100%
+  );
+  --gradient-dark: linear-gradient(
+    90deg,
+    var(--primary-color-dark) 0%,
+    var(--primary-color) 100%
+  );
 }
 
 * {
