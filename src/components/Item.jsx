@@ -5,7 +5,9 @@ function Item(props) {
     <>
       <div className="item">
         <img src={props.image} alt={props.title} className="item-image" />
-        <h3 className="item-name">{props.title}</h3>
+        <a href="#">
+          <h3 className="item-name">{props.title}</h3>
+        </a>
         <p className="item-price">${props.price}</p>
         <p className="item-description">{props.description}</p>
         <button className="item-button">Agregar al carrito</button>

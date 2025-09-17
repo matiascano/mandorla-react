@@ -5,21 +5,38 @@ import "./NavBar.css";
 function NavBar() {
   return (
     <>
-      <header>
-        <div className="left">
+      <nav className="nav">
+        <input type="checkbox" id="nav-check" />
+        <div className="nav-header">
           <img src={mandorlaLogo} alt="Mandorla Logo" />
         </div>
-        <div className="right">
-          <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#historia">Historia</a>
-            <a href="#tienda">Tienda</a>
-            <a href="#prensa">Prensa</a>
-            <a href="#contacto">Contacto</a>
-          </nav>
-          <CartWidget />
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
         </div>
-      </header>
+
+        <ul className="nav-list">
+          <li>
+            <a href="#">Inicio</a>
+          </li>
+          <li>
+            <a href="#">Acerca de</a>
+          </li>
+          <li>
+            <a href="#">Tienda</a>
+          </li>
+          <li>
+            <a href="#">Prensa</a>
+          </li>
+          <li>
+            <a href="#">Dónde comprar</a>
+          </li>
+        </ul>
+        <CartWidget />
+      </nav>
     </>
   );
 }

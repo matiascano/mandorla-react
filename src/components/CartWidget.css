@@ -1,0 +1,33 @@
+.cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart img {
+  height: 30px;
+  cursor: pointer;
+}
+.cart-count {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -5px;
+  right: -10px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-size: 0.8rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+.cart-count.hidden {
+  display: none;
+}
+.cart:hover img {
+  filter: brightness(0.8);
+}
+.cart:active img {
+  filter: brightness(0.6);
+}
