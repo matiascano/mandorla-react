@@ -9,10 +9,11 @@ a:hover {
 }
 
 .item {
+  position: relative;
   box-shadow: var(--box-shadow);
   border-radius: 0.5rem;
   background-color: var(--white);
-  text-align: center;
+  text-align: left;
   max-width: 100%;
   overflow: hidden;
   display: flex;
@@ -21,13 +22,27 @@ a:hover {
   align-items: center;
 }
 
+.item-category {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--primary-color-dark);
+  color: var(--white);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
 .item-image {
   max-width: 100%;
 }
 
 .item-name {
   font-size: 1.2em;
-  margin: 1rem 0 0.5rem;
+  padding: 0.8rem 1rem 0;
+  line-height: 1;
+  color: var(--primary-color-dark);
 }
 
 .item-price {
@@ -40,10 +55,8 @@ a:hover {
   color: var(--font-color);
   margin: 1rem 0 0.5rem;
   padding: 0 1rem;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  max-width: inherit;
+
+  line-clamp: 2;
 }
 .item button {
   margin-top: 10px;
@@ -58,5 +71,5 @@ a:hover {
   margin-bottom: 1rem;
 }
 .item button:hover {
-  background: var(--gradient);
+  background: var(--primary-color-dark);
 }
