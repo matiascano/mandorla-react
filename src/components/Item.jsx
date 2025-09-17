@@ -8,6 +8,7 @@ function Item(props) {
         <a href="#">
           <h3 className="item-name">{props.title}</h3>
         </a>
+        <p className="item-category">{props.category}</p>
         <p className="item-price">${props.price}</p>
         <p className="item-description">{props.description}</p>
         <button className="item-button">Agregar al carrito</button>

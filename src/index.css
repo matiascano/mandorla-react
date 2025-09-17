@@ -6,8 +6,8 @@
   --secondary-color-dark: #2b241a;
   --secondary-color-light: #60543b;
   --font-color: #333;
-  --background-color: #f9f9f8;
-  --white: #fafafa;
+  --background-color: #f4f2ee;
+  --white: #fff;
   --black: #111;
   --box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
@@ -20,8 +20,23 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--background-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--font-color);
   line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  white-space: unset;
+  text-wrap: balance;
+}
+
+p,
+li {
+  text-wrap: pretty;
 }

@@ -13,8 +13,12 @@ a:hover {
   border-radius: 0.5rem;
   background-color: var(--white);
   text-align: center;
-  max-width: 300px;
+  max-width: 100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .item-image {
@@ -35,6 +39,11 @@ a:hover {
   font-size: 0.9em;
   color: var(--font-color);
   margin: 1rem 0 0.5rem;
+  padding: 0 1rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: inherit;
 }
 .item button {
   margin-top: 10px;
