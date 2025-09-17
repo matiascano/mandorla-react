@@ -2,11 +2,18 @@
   width: 100%;
   background-color: var(--white);
   box-shadow: var(--box-shadow);
-  padding: 0.5rem 1rem;
+}
+
+.nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
 }
+
 .nav-header {
   flex: 0.95;
   display: flex;
