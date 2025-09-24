@@ -76,26 +76,3 @@ a {
   overflow: hidden;
   opacity: 0.8;
 }
-.item button {
-  padding: 10px 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--gradient-dark);
-  color: var(--white);
-  font-weight: 400;
-  gap: 0.5rem;
-  text-transform: uppercase;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-.item button img {
-  height: 2rem;
-  filter: invert(1);
-}
-
-.item button:hover {
-  background: var(--primary-color-dark);
-}

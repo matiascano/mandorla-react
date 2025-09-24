@@ -1,5 +1,6 @@
 import "./Item.css";
-import canasto from "../assets/canasto.svg";
+
+import ItemCount from "./ItemCount";
 
 function Item(props) {
   return (
@@ -14,10 +15,11 @@ function Item(props) {
           <h3 className="item-name">{props.title}</h3>
           <p className="item-description">{props.description}</p>
         </a>
-        <button className="item-button">
-          <img src={canasto} alt="Canasto" />
-          Agregar al carrito
-        </button>
+        <ItemCount
+          stock={props.stock}
+          initial={1}
+          onAdd={(count) => console.log(`Added ${count} items to cart`)}
+        />
       </div>
     </>
   );
