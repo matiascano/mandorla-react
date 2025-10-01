@@ -1,14 +1,33 @@
+import { useState, useEffect } from "react";
 import "./ItemListContainer.css";
 import Item from "./Item";
 import productos from "../data/data";
 
 function ItemListContainer(props) {
+  const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchItems = () => {
+      setTimeout(() => {
+        setItems(productos);
+        setLoading(false);
+      }, 1000);
+    };
+
+    fetchItems();
+  }, []);
+
+  if (loading) {
+    return <p>Cargando productos...</p>;
+  }
+
   return (
     <>
       <div className="container">
         <h2>{props.greeting}</h2>
         <div className="product-list">
-          {productos.map((prod) => (
+          {items.map((prod) => (
             <Item
               key={prod.id}
               title={prod.title}
