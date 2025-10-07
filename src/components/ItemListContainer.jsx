@@ -29,7 +29,7 @@ function ItemListContainer(props) {
         <div className="product-list">
           {items.map((prod) => (
             <Item
-              key={prod.id}
+              id={prod.id}
               title={prod.title}
               category={prod.category}
               price={prod.price}

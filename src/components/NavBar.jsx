@@ -11,8 +11,8 @@ function NavBar() {
           <div className="nav-header">
             <img src={mandorlaLogo} alt="Mandorla Logo" />
           </div>
-          <div class="nav-btn">
-            <label for="nav-check">
+          <div className="nav-btn">
+            <label htmlFor="nav-check">
               <span></span>
               <span></span>
               <span></span>
@@ -21,19 +21,19 @@ function NavBar() {
 
           <ul className="nav-list">
             <li>
-              <a href="#">Inicio</a>
+              <a href="/">Inicio</a>
             </li>
             <li>
-              <a href="#">Acerca de</a>
+              <a href="/acerca">Acerca de</a>
             </li>
             <li>
-              <a href="#">Tienda</a>
+              <a href="/tienda">Tienda</a>
             </li>
             <li>
-              <a href="#">Prensa</a>
+              <a href="/prensa">Prensa</a>
             </li>
             <li>
-              <a href="#">Dónde comprar</a>
+              <a href="/donde-comprar">Dónde comprar</a>
             </li>
           </ul>
           <CartWidget />
