@@ -15,7 +15,11 @@ function App() {
           element={
             <>
               <Hero />
-              <div className="container"></div>
+              <div className="container">
+                Podes ver todos los productos en Tienda y las categorias en
+                Alfajor Negro / Blanco y otra categoria "Manjar" que me falta
+                bien la descripcion e imagen
+              </div>
             </>
           }
         />
