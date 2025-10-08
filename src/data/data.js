@@ -2,6 +2,7 @@ const productos = [
   {
     id: 1,
     title: "DULCE DE LECHE BLANCO",
+    categoryId: "alfajor-blanco",
     category: "Alfajor Blanco",
     price: 3500,
     description:
@@ -13,6 +14,7 @@ const productos = [
   {
     id: 2,
     title: "CORAZÓN DE FRUTOS ROJOS BLANCO",
+    categoryId: "alfajor-blanco",
     category: "Alfajor Blanco",
     price: 3500,
     description:
@@ -24,6 +26,7 @@ const productos = [
   {
     id: 3,
     title: "DULCE DE LECHE Y NUEZ",
+    categoryId: "alfajor-blanco",
     category: "Alfajor Blanco",
     price: 3500,
     description:
@@ -35,6 +38,7 @@ const productos = [
   {
     id: 4,
     title: "MOUSSE DE CHOCOLATE BLANCO",
+    categoryId: "alfajor-blanco",
     category: "Alfajor Blanco",
     price: 3500,
     description:
@@ -46,6 +50,7 @@ const productos = [
   {
     id: 5,
     title: "CAFÉ AL COÑAC",
+    categoryId: "alfajor-negro",
     category: "Alfajor Negro",
     price: 3500,
     description:
@@ -57,6 +62,7 @@ const productos = [
   {
     id: 6,
     title: "MOUSSE CON CORAZÓN DE NARANJA",
+    categoryId: "alfajor-negro",
     category: "Alfajor Negro",
     price: 3500,
     description:
@@ -68,10 +74,22 @@ const productos = [
   {
     id: 7,
     title: "MOUSSE DE CHOCOLATE",
+    categoryId: "alfajor-negro",
     category: "Alfajor Negro",
     price: 3500,
     description:
       "Masa de cacao, relleno mousse de chocolate negro. Baño cobertura negro.",
+    image:
+      "https://dcdn-us.mitiendanube.com/stores/004/290/481/products/mousse-negro-af97da2942e0fbeabc17228805618120-1024-1024.webp",
+    stock: 50,
+  },
+  {
+    id: 8,
+    title: "MANJAR",
+    categoryId: "manjar",
+    category: "Manjar",
+    price: 3500,
+    description: "Masa de cacao, relleno Manjar negro. Baño cobertura negro.",
     image:
       "https://dcdn-us.mitiendanube.com/stores/004/290/481/products/mousse-negro-af97da2942e0fbeabc17228805618120-1024-1024.webp",
     stock: 50,

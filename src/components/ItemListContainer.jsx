@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import "./ItemListContainer.css";
 import Item from "./Item";
 import productos from "../data/data";
@@ -6,20 +7,32 @@ import productos from "../data/data";
 function ItemListContainer(props) {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { categoryId } = useParams();
 
   useEffect(() => {
     const fetchItems = () => {
       setTimeout(() => {
-        setItems(productos);
+        if (categoryId) {
+          const filteredItems = productos.filter(
+            (prod) => prod.categoryId === categoryId
+          );
+          setItems(filteredItems);
+        } else {
+          setItems(productos);
+        }
         setLoading(false);
       }, 1000);
     };
 
     fetchItems();
-  }, []);
+  }, [categoryId]);
 
   if (loading) {
     return <p>Cargando productos...</p>;
+  }
+
+  if (items.length === 0) {
+    return <p>No se encontraron productos.</p>;
   }
 
   return (
@@ -29,6 +42,7 @@ function ItemListContainer(props) {
         <div className="product-list">
           {items.map((prod) => (
             <Item
+              key={prod.id}
               id={prod.id}
               title={prod.title}
               category={prod.category}

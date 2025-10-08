@@ -21,7 +21,7 @@ function ItemCount({ stock, initial, onAdd }) {
   };
 
   const decrement = () => {
-    if (count > 1) {
+    if (count > 0) {
       setCount(count - 1);
       setLimitedStock(false); // Resetear el estado de stock limitado al decrementar
     }

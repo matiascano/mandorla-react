@@ -5,13 +5,13 @@ import productos from "../data/data";
 
 function ItemDetailContainer() {
   const { id } = useParams();
-  const itemId = parseInt(id, 10);
+  const itemId = id;
   const [item, setItem] = useState(null);
   const [loading, setLoading] = useState(true);
   console.log(itemId);
   useEffect(() => {
     const fetchItem = () => {
-      const foundItem = productos.find((prod) => prod.id === itemId);
+      const foundItem = productos.find((prod) => String(prod.id) === itemId);
       setItem(foundItem);
       setLoading(false);
     };

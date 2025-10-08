@@ -1,4 +1,5 @@
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
 import mandorlaLogo from "../assets/mandorla.webp";
 import "./NavBar.css";
 
@@ -21,19 +22,29 @@ function NavBar() {
 
           <ul className="nav-list">
             <li>
-              <a href="/">Inicio</a>
+              <Link to="/">Inicio</Link>
             </li>
             <li>
-              <a href="/acerca">Acerca de</a>
+              <Link to="/acerca">Acerca de</Link>
             </li>
             <li>
-              <a href="/tienda">Tienda</a>
+              <Link to="/tienda">Tienda</Link>
+            </li>
+
+            <li>
+              <Link to="/category/alfajor-blanco">Alfajor Blanco</Link>
             </li>
             <li>
-              <a href="/prensa">Prensa</a>
+              <Link to="/category/alfajor-negro">Alfajor Negro</Link>
             </li>
             <li>
-              <a href="/donde-comprar">Dónde comprar</a>
+              <Link to="/category/manjar">Manjar</Link>
+            </li>
+            <li>
+              <Link to="/prensa">Prensa</Link>
+            </li>
+            <li>
+              <Link to="/donde-comprar">Dónde comprar</Link>
             </li>
           </ul>
           <CartWidget />
