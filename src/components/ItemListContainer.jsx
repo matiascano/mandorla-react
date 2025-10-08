@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { BounceLoader } from "react-spinners";
 import "./ItemListContainer.css";
 import Item from "./Item";
 import getData, { getProductsByCategory } from "../services/productService";
@@ -37,7 +38,11 @@ function ItemListContainer(props) {
   }, [categoryId]);
 
   if (loading) {
-    return <p>Cargando productos...</p>;
+    return (
+      <div>
+        <BounceLoader />
+      </div>
+    );
   }
 
   if (items.length === 0) {
@@ -46,22 +51,20 @@ function ItemListContainer(props) {
 
   return (
     <>
-      <div className="container">
-        <h2>{props.greeting}</h2>
-        <div className="product-list">
-          {items.map((prod) => (
-            <Item
-              key={prod.id}
-              id={prod.id}
-              title={prod.title}
-              category={prod.category}
-              price={prod.price}
-              description={prod.description}
-              image={prod.image}
-              stock={prod.stock}
-            />
-          ))}
-        </div>
+      <h2>{props.greeting}</h2>
+      <div className="product-list">
+        {items.map((prod) => (
+          <Item
+            key={prod.id}
+            id={prod.id}
+            title={prod.title}
+            category={prod.category}
+            price={prod.price}
+            description={prod.description}
+            image={prod.image}
+            stock={prod.stock}
+          />
+        ))}
       </div>
     </>
   );

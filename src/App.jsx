@@ -10,22 +10,52 @@ function App() {
     <Router>
       <NavBar />
       <Routes>
-        <Route path="/" element={<Hero />} />
-        <Route path="/acerca" element={<main>acerca</main>} />
-        <Route path="/prensa" element={<main>prensa</main>} />
-        <Route path="/donde-comprar" element={<main>donde-comprar</main>} />
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <div className="container"></div>
+            </>
+          }
+        />
+        <Route
+          path="/acerca"
+          element={<div className="container">acerca</div>}
+        />
+        <Route
+          path="/prensa"
+          element={<div className="container">prensa</div>}
+        />
+        <Route
+          path="/donde-comprar"
+          element={<div className="container">donde-comprar</div>}
+        />
         <Route
           path="/tienda"
-          element={<ItemListContainer greeting="¡Probá nuestros alfajores!" />}
+          element={
+            <div className="container">
+              <ItemListContainer greeting="¡Probá nuestros alfajores!" />
+            </div>
+          }
         />
-        <Route path="/tienda/:id" element={<ItemDetailContainer />} />
+        <Route
+          path="/tienda/:id"
+          element={
+            <div className="container">
+              <ItemDetailContainer />
+            </div>
+          }
+        />
         <Route
           path="/category/:categoryId"
           element={
-            <ItemListContainer greeting="¡Empalagate con estas delicias!" />
+            <div className="container">
+              <ItemListContainer greeting="¡Empalagate con estas delicias!" />
+            </div>
           }
         />
-        <Route path="/*" element={<main>ERROR 404</main>} />
+        <Route path="/*" element={<div className="container">ERROR 404</div>} />
       </Routes>
       <Footer />
     </Router>
