@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./ItemListContainer.css";
 import Item from "./Item";
-import productos from "../data/data";
+import getData, { getProductsByCategory } from "../services/productService";
 
 function ItemListContainer(props) {
   const [items, setItems] = useState([]);
@@ -10,21 +10,30 @@ function ItemListContainer(props) {
   const { categoryId } = useParams();
 
   useEffect(() => {
-    const fetchItems = () => {
-      setTimeout(() => {
-        if (categoryId) {
-          const filteredItems = productos.filter(
-            (prod) => prod.categoryId === categoryId
-          );
-          setItems(filteredItems);
-        } else {
-          setItems(productos);
-        }
-        setLoading(false);
-      }, 1000);
-    };
+    setLoading(true);
 
-    fetchItems();
+    if (categoryId) {
+      getProductsByCategory(categoryId)
+        .then((data) => {
+          setItems(data);
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.error(error);
+          setItems([]);
+          setLoading(false);
+        });
+    } else {
+      getData()
+        .then((data) => {
+          setItems(data);
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.error(error);
+          setLoading(false);
+        });
+    }
   }, [categoryId]);
 
   if (loading) {
