@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { BounceLoader } from "react-spinners";
 import ItemDetail from "./ItemDetail";
 import { getProductById } from "../services/productService";
 
@@ -24,7 +25,11 @@ function ItemDetailContainer() {
   }, [itemId]);
 
   if (loading) {
-    return <p>Cargando...</p>;
+    return (
+      <div>
+        <BounceLoader />
+      </div>
+    );
   }
 
   if (!item) {
