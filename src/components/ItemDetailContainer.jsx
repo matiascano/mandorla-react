@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
-import productos from "../data/data";
+import { getProductById } from "../services/productService";
 
 function ItemDetailContainer() {
   const { id } = useParams();
@@ -10,13 +10,17 @@ function ItemDetailContainer() {
   const [loading, setLoading] = useState(true);
   console.log(itemId);
   useEffect(() => {
-    const fetchItem = () => {
-      const foundItem = productos.find((prod) => String(prod.id) === itemId);
-      setItem(foundItem);
-      setLoading(false);
-    };
+    setLoading(true);
 
-    fetchItem();
+    getProductById(itemId)
+      .then((data) => {
+        setItem(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error(error);
+        setLoading(false);
+      });
   }, [itemId]);
 
   if (loading) {
