@@ -1,5 +1,5 @@
 import productos from "../data/data";
-import { puntosVenta } from "../data/data";
+import { puntosVenta, articulosPrensa } from "../data/data";
 
 function getData() {
   return new Promise((resolve) => {
@@ -37,6 +37,14 @@ export function getPuntosVenta() {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(puntosVenta);
+    }, 1000);
+  });
+}
+
+export function getArticulosPrensa() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(articulosPrensa);
     }, 1000);
   });
 }

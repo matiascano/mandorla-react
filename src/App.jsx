@@ -7,6 +7,7 @@ import BannerCompras from "./components/BannerCompras";
 import Footer from "./components/Footer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import PuntoVentaListContainer from "./components/PuntoVentaListContainer";
+import ArticuloPrensaListContainer from "./components/ArticuloPrensaListContainer";
 import AcercaDe from "./components/AcercaDe";
 import Error404 from "./components/Error404";
 
@@ -43,7 +44,11 @@ function App() {
         />
         <Route
           path="/prensa"
-          element={<div className="container">prensa</div>}
+          element={
+            <div className="container">
+              <ArticuloPrensaListContainer />
+            </div>
+          }
         />
         <Route
           path="/donde-comprar"

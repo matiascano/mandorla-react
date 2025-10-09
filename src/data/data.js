@@ -149,4 +149,34 @@ export const puntosVenta = [
   },
 ];
 
+export const articulosPrensa = [
+  {
+    id: 1,
+    titulo: "Artículo 1",
+    medio: "Revista Caras",
+    contenido: "Contenido del artículo 1",
+    fecha: "04/03/2025",
+    imagen: "/img/fabrica.avif",
+    link: "https://www.ejemplo.com/articulo1",
+  },
+  {
+    id: 2,
+    titulo: "Artículo 2",
+    medio: "Revista La Nación",
+    contenido: "Contenido del artículo 2",
+    fecha: "14/05/2025",
+    imagen: "/img/fabrica.avif",
+    link: "https://www.ejemplo.com/articulo2",
+  },
+  {
+    id: 3,
+    titulo: "Artículo 3",
+    medio: "Podcast Gourmet",
+    contenido: "Contenido del artículo 3",
+    fecha: "03/08/2025",
+    imagen: "/img/fabrica.avif",
+    link: "https://www.ejemplo.com/articulo3",
+  },
+];
+
 export default productos;
