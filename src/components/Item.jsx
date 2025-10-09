@@ -5,7 +5,6 @@ import ItemCount from "./ItemCount";
 function Item(props) {
   return (
     <>
-      {console.log(props)}
       <div className="item" key={props.id}>
         <Link to={`/tienda/${props.id}`}>
           <img src={props.image} alt={props.title} className="item-image" />

@@ -96,4 +96,22 @@ const productos = [
   },
 ];
 
+export const puntosVenta = [
+  {
+    id: 1,
+    nombre: "Punto de Venta 1",
+    direccion: "Calle Falsa 123",
+    telefono: "1234-5678",
+    horario: "Lunes a Viernes 9:00 - 18:00",
+    link: "https://www.ejemplo.com/punto1",
+  },
+  {
+    id: 2,
+    nombre: "Punto de Venta 2",
+    direccion: "Avenida Siempre Viva 742",
+    telefono: "8765-4321",
+    horario: "Lunes a Viernes 9:00 - 18:00",
+  },
+];
+
 export default productos;

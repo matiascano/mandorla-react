@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { BounceLoader } from "react-spinners";
 import ItemDetail from "./ItemDetail";
-import { getProductById } from "../services/productService";
+import { getProductById } from "../services/Services";
 
 function ItemDetailContainer() {
   const { id } = useParams();

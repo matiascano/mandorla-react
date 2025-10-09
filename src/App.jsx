@@ -6,6 +6,7 @@ import NovedadHome from "./components/NovedadHome";
 import BannerCompras from "./components/BannerCompras";
 import Footer from "./components/Footer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
+import PuntoVentaListContainer from "./components/PuntoVentaListContainer";
 
 function App() {
   return (
@@ -40,7 +41,11 @@ function App() {
         />
         <Route
           path="/donde-comprar"
-          element={<div className="container">donde-comprar</div>}
+          element={
+            <div className="container">
+              <PuntoVentaListContainer />
+            </div>
+          }
         />
         <Route
           path="/tienda"
