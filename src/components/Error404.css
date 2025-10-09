@@ -1,0 +1,49 @@
+/*
+<div className="error-container">
+        <img src={errorImage} alt="Error 404" className="error-image" />
+        <h2 className="error-title">No deberías estar aquí</h2>
+        <p className="error-message">
+          Lo sentimos, la página que estás buscando no existe.
+        </p>
+        <Link to="/" className="error-link">
+          Volver a la página de inicio
+        </Link>
+      </div>
+*/
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: var(--white);
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  text-align: center;
+}
+.error-image {
+  width: 400px;
+  height: auto;
+  margin-bottom: 20px;
+}
+.error-title {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+.error-message {
+  font-size: 1.2rem;
+  color: var(--dark-font-color);
+  margin-bottom: 20px;
+}
+.error-link {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+.error-link:hover {
+  text-decoration: underline;
+}

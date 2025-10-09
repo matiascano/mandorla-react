@@ -7,6 +7,7 @@ import BannerCompras from "./components/BannerCompras";
 import Footer from "./components/Footer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import PuntoVentaListContainer from "./components/PuntoVentaListContainer";
+import Error404 from "./components/Error404";
 
 function App() {
   return (
@@ -71,7 +72,14 @@ function App() {
             </div>
           }
         />
-        <Route path="/*" element={<div className="container">ERROR 404</div>} />
+        <Route
+          path="/*"
+          element={
+            <div className="container">
+              <Error404 />
+            </div>
+          }
+        />
       </Routes>
       <Footer />
     </Router>
