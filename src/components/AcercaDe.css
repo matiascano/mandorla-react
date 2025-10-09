@@ -1,0 +1,28 @@
+.about-section {
+  padding: 40px 20px;
+  background-color: var(--white);
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: var(--box-shadow);
+}
+.about-title {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+.about-text {
+  font-size: 1.2rem;
+  color: var(--dark-font-color);
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: left;
+}
+.about-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  margin: 20px auto;
+  display: block;
+}

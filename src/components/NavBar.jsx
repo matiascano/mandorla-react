@@ -1,6 +1,5 @@
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
-import mandorlaLogo from "../assets/mandorla.webp";
 import "./NavBar.css";
 
 function NavBar() {
@@ -10,7 +9,13 @@ function NavBar() {
         <div className="nav-container">
           <input type="checkbox" id="nav-check" />
           <div className="nav-header">
-            <img src={mandorlaLogo} alt="Mandorla Logo" />
+            <Link to="/" className="nav-title">
+              <img
+                src="/img/logo.png"
+                alt="Mandorla Logo"
+                className="nav-logo"
+              />
+            </Link>
           </div>
           <div className="nav-btn">
             <label htmlFor="nav-check">

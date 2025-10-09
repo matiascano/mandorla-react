@@ -7,6 +7,7 @@ import BannerCompras from "./components/BannerCompras";
 import Footer from "./components/Footer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import PuntoVentaListContainer from "./components/PuntoVentaListContainer";
+import AcercaDe from "./components/AcercaDe";
 import Error404 from "./components/Error404";
 
 function App() {
@@ -34,7 +35,11 @@ function App() {
         />
         <Route
           path="/acerca"
-          element={<div className="container">acerca</div>}
+          element={
+            <div className="container">
+              <AcercaDe />
+            </div>
+          }
         />
         <Route
           path="/prensa"
