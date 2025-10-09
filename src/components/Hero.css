@@ -1,9 +1,17 @@
 .hero {
+  padding: 6rem 0;
+  background: var(--gradient);
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 2rem;
-  background: var(--gradient);
+  justify-content: center;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .hero-content h1 {
