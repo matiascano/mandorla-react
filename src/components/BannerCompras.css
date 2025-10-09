@@ -1,0 +1,32 @@
+.banner-compras {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: var(--box-shadow);
+  width: 100%;
+}
+
+.banner-step {
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+  text-align: left;
+}
+
+.banner-step img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  fill: var(--primary-color);
+}
+
+.banner-step h3 {
+  margin: 0;
+  line-height: 1;
+  font-size: 1.2em;
+  color: var(--primary-color);
+}

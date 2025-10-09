@@ -1,0 +1,86 @@
+/*
+<section className="novedad-home">
+        <div className="novedad-list">
+          <div className="novedad-item">
+            <img src={imageUrl} alt={title} />
+            <div className="novedad-description">
+              <h2>{title}</h2>
+              <p>{description}</p>
+              <Link to={link} className="novedad-link">
+                Ver más
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+*/
+
+.novedad-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: var(--box-shadow);
+  width: 100%;
+}
+
+.novedad-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: left;
+}
+.novedad-item img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.novedad-description h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.5em;
+  color: var(--primary-color);
+  text-align: left;
+}
+.novedad-description p {
+  margin: 0 0 15px 0;
+  font-size: 1em;
+  color: var(--dark-font-color);
+  text-align: left;
+}
+.novedad-link {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+  border: 2px solid var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.novedad-link:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+@media (max-width: 600px) {
+  .novedad-item {
+    max-width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .novedad-description h2 {
+    font-size: 1.2em;
+  }
+  .novedad-description p {
+    font-size: 0.9em;
+  }
+  .novedad-link {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+}
