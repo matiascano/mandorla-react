@@ -8,14 +8,14 @@ function BannerCompras() {
         <div className="banner-step step-1">
           <img src={canasto} alt="canasto" />
           <div>
-            <h3>ELEGÍ LO QUE QUERES</h3>
+            <h3>SELECCIONA LO QUE QUIERAS</h3>
             <p>Tentate y llená el canasto.</p>
           </div>
         </div>
         <div className="banner-step step-2">
           <img src={canasto} alt="canasto" />
           <div>
-            <h3>PAGÁ COMO QUIERAS</h3>
+            <h3>ABONALO COMO QUIERAS</h3>
             <p>Elegí la forma de pago.</p>
           </div>
         </div>
