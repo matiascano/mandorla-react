@@ -75,6 +75,7 @@ h5,
 h6 {
   font-family: "Carentro DEMO", serif;
   white-space: unset;
+  text-transform: uppercase;
   text-wrap: balance;
 }
 
