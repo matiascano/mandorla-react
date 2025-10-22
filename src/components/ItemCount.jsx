@@ -30,6 +30,7 @@ function ItemCount({ stock, initial, onAdd }) {
   const addToCart = () => {
     onAdd(count);
     setLimitedStock(false); // Resetear el estado de stock limitado al agregar al carrito
+    setCount(initial);
   };
 
   return (

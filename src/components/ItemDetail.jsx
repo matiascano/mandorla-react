@@ -1,7 +1,10 @@
 import ItemCount from "./ItemCount";
 import "./ItemDetail.css";
+import { useContext } from "react";
+import cartContext from "../context/cartContext";
 
 function ItemDetail({ item }) {
+  const { addToCart } = useContext(cartContext);
   return (
     <div className="item-detail">
       <img src={item.image} alt={item.title} />
@@ -16,9 +19,7 @@ function ItemDetail({ item }) {
           <ItemCount
             stock={item.stock}
             initial={0}
-            onAdd={(count) =>
-              console.log(`Agregaste ${count} items al carrito`)
-            }
+            onAdd={(count) => addToCart({ ...item, quantity: count })}
           />
         </div>
       </div>
