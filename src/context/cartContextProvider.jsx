@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { CartContext } from "./cartContext";
+import toast from "react-hot-toast";
 
 export function CartContextProvider({ children }) {
   const [cart, setCart] = useState([]);
@@ -28,14 +29,17 @@ export function CartContextProvider({ children }) {
     } else {
       setCart((prevCart) => [...prevCart, item]);
     }
+    toast.success(`${item.quantity} ${item.title} agregado(s) al carrito`);
   }
 
   function removeFromCart(itemId) {
     setCart((prevCart) => prevCart.filter((item) => item.id !== itemId));
+    toast.error("Producto eliminado del carrito");
   }
 
   function clearCart() {
     setCart([]);
+    toast.error("Carrito vaciado");
   }
 
   function getTotalItems() {
