@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import "./Item.css";
 import ItemCount from "./ItemCount";
 import { useContext } from "react";
-import cartContext from "../context/cartContext";
+import { CartContext } from "../context/cartContext";
 
 function Item(item) {
-  const { addToCart } = useContext(cartContext);
+  const { addToCart } = useContext(CartContext);
   return (
     <>
       <div className="item" key={item.id}>

@@ -7,9 +7,7 @@ function ItemCount({ stock, initial, onAdd }) {
   const [limitedStock, setLimitedStock] = useState(false);
 
   // Se ejecuta cuando se monta el componente o cuando cambia 'limitedStock'
-  useEffect(() => {
-    console.log("Component mounted or 'limitedStock' changed");
-  }, [limitedStock]);
+  useEffect(() => {}, [limitedStock]);
 
   const increment = () => {
     if (count < stock) {

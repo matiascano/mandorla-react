@@ -1,10 +1,10 @@
 import ItemCount from "./ItemCount";
 import "./ItemDetail.css";
 import { useContext } from "react";
-import cartContext from "../context/cartContext";
+import { CartContext } from "../context/cartContext";
 
 function ItemDetail({ item }) {
-  const { addToCart } = useContext(cartContext);
+  const { addToCart } = useContext(CartContext);
   return (
     <div className="item-detail">
       <img src={item.image} alt={item.title} />

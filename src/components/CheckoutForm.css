@@ -1,0 +1,15 @@
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+}
+label {
+  font-weight: bold;
+}
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

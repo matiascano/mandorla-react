@@ -1,11 +1,27 @@
 import React from "react";
 import "./CartContainer.css";
 import { useContext } from "react";
-import cartContext from "../context/cartContext";
+import { CartContext } from "../context/cartContext";
+import { createOrder } from "../services/FirestoreService";
+import CheckoutForm from "./CheckoutForm";
 
 function CartContainer() {
   const { cart, removeFromCart, clearCart, getTotalItems, getTotalPrice } =
-    useContext(cartContext);
+    useContext(CartContext);
+
+  async function handleCheckout(formData) {
+    const orderData = {
+      buyer: formData,
+      items: cart,
+      totalItems: getTotalItems(),
+      totalPrice: getTotalPrice(),
+      date: new Date(),
+    };
+
+    const response = await createOrder(orderData);
+    alert(`Gracias por tu compra! Tu número de orden es: ${response.id}`);
+    clearCart();
+  }
 
   return (
     <div className="cart-container">
@@ -37,9 +53,13 @@ function CartContainer() {
         </>
       )}
       {cart.length > 0 && (
-        <div className="cart-actions">
-          <button onClick={clearCart}>Vaciar Carrito</button>
-        </div>
+        <>
+          <div className="cart-actions">
+            <button onClick={clearCart}>Vaciar Carrito</button>
+            <button onClick={handleCheckout}>Finalizar Compra</button>
+          </div>
+          <CheckoutForm handleCheckout={handleCheckout} />
+        </>
       )}
     </div>
   );

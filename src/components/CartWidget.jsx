@@ -2,10 +2,10 @@ import "./CartWidget.css";
 import canasto from "../assets/canasto.svg";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import cartContext from "../context/cartContext";
+import { CartContext } from "../context/cartContext";
 
 function CartWidget() {
-  const { getTotalItems } = useContext(cartContext);
+  const { getTotalItems } = useContext(CartContext);
   const totalItems = getTotalItems();
   return (
     <>

@@ -3,7 +3,8 @@ import { useParams } from "react-router-dom";
 import { BounceLoader } from "react-spinners";
 import "./ItemListContainer.css";
 import Item from "./Item";
-import getData, { getProductsByCategory } from "../services/Services";
+import { getProductsByCategory } from "../services/FirestoreService";
+import { getData } from "../services/FirestoreService";
 
 function ItemListContainer(props) {
   const [items, setItems] = useState([]);

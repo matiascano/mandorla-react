@@ -11,7 +11,7 @@ import ArticuloPrensaListContainer from "./components/ArticuloPrensaListContaine
 import AcercaDe from "./components/AcercaDe";
 import Error404 from "./components/Error404";
 import CartContainer from "./components/CartContainer";
-import { CartContextProvider } from "./context/cartContext";
+import { CartContextProvider } from "./context/cartContextProvider";
 
 function App() {
   return (
@@ -103,6 +103,7 @@ function App() {
           />
         </Routes>
       </CartContextProvider>
+
       <Footer />
     </Router>
   );

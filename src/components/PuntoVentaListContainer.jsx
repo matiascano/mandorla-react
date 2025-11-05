@@ -2,7 +2,7 @@ import "./PuntoVentaListContainer.css";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { BounceLoader } from "react-spinners";
-import { getPuntosVenta } from "../services/Services";
+import { getPuntosVenta } from "../services/FirestoreService";
 import PuntoVenta from "./PuntoVenta";
 
 function PuntoVentaListContainer() {

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { BounceLoader } from "react-spinners";
-import { getArticulosPrensa } from "../services/Services";
+import { getArticulosPrensa } from "../services/FirestoreService";
 import ArticuloPrensa from "./ArticuloPrensa";
 import "./ArticuloPrensaListContainer.css";
 
@@ -46,7 +46,7 @@ function ArticuloPrensaListContainer() {
             titulo={articulo.titulo}
             medio={articulo.medio}
             contenido={articulo.contenido}
-            fecha={articulo.fecha}
+            fecha={new Date(articulo.fecha.seconds * 1000).toLocaleDateString()}
             imagen={articulo.imagen}
             link={articulo.link}
           />
