@@ -30,6 +30,14 @@ Mandorla es una aplicación web que simula una tienda online de alfajores artesa
    ```
 4. Abrir el navegador en la dirección que muestra Vite (generalmente `http://localhost:5173`)
 
+## ✅ TODO
+
+- **Hacer sitio responsivo**: Hacer que se adapte a las distintas pantallas
+- **Puntos de venta**: Cargar puntos de venta y mostrarlos en un mapa
+- **Envio de emails**: Enviar email al realizar el pedido al comprador y vendedor
+- **Pantalla de pedido**: Realizar pantalla de trackeo del pedido
+- **Actualizar foto**: Falta foto de Manjar
+
 ## 👨‍💻 Autor
 
 Proyecto desarrollado por **Matias Cano** como parte del curso de React en CoderHouse.
