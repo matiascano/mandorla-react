@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { CartContext } from "../context/cartContext";
 import { createOrder } from "../services/FirestoreService";
 import CheckoutForm from "./CheckoutForm";
+import swal from "sweetalert";
 
 function CartContainer() {
   const { cart, removeFromCart, clearCart, getTotalItems, getTotalPrice } =
@@ -19,8 +20,12 @@ function CartContainer() {
     };
 
     const response = await createOrder(orderData);
-    alert(`Gracias por tu compra! Tu número de orden es: ${response.id}`);
-    clearCart();
+    swal({
+      title: "Gracias por tu compra!",
+      text: `Tu número de orden es: ${response.id}`,
+      icon: "success",
+    });
+    clearCart("fromCheckout");
   }
 
   return (
