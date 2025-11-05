@@ -12,11 +12,14 @@ import AcercaDe from "./components/AcercaDe";
 import Error404 from "./components/Error404";
 import CartContainer from "./components/CartContainer";
 import { CartContextProvider } from "./context/cartContextProvider";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <Router>
       <CartContextProvider>
+        <Toaster position="bottom-right" reverseOrder={false} />
+
         <NavBar />
         <Routes>
           <Route
