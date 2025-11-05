@@ -38,7 +38,7 @@ function PuntoVentaListContainer() {
       <h2>Puntos de Venta</h2>
       <MapContainer
         center={positionDefault}
-        zoom={14}
+        zoom={13}
         style={{ height: "800px", width: "100%" }}
       >
         <TileLayer
