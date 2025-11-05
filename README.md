@@ -36,6 +36,7 @@ Mandorla es una aplicación web que simula una tienda online de alfajores artesa
 - **Envio de emails**: Enviar email al realizar el pedido al comprador y vendedor
 - **Pantalla de pedido**: Realizar pantalla de trackeo del pedido
 - **Actualizar foto**: Falta foto de Manjar
+- **Pasarela de pago**: Agregar pasarela de pago MercadoPago
 
 ## 👨‍💻 Autor
 
