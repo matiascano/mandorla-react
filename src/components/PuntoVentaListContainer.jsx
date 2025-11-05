@@ -31,19 +31,19 @@ function PuntoVentaListContainer() {
     );
   }
 
-  const positionDefault = [-38.0055, -57.5426]; // centro de Mar del Plata
+  const positionDefault = [-38.0055, -57.5426];
 
   return (
     <div className="punto-venta-list-container">
       <h2>Puntos de Venta</h2>
       <MapContainer
         center={positionDefault}
-        zoom={12}
-        style={{ height: "500px", width: "100%" }}
+        zoom={14}
+        style={{ height: "800px", width: "100%" }}
       >
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
+          attribution="&copy; OpenStreetMap contributors Humanitarian OpenStreetMap Team"
         />
 
         {puntosVenta.map(
