@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { CartContext } from "./cartContext";
 import toast from "react-hot-toast";
+import swal from "sweetalert";
 
 export function CartContextProvider({ children }) {
   const [cart, setCart] = useState([]);
@@ -33,13 +34,37 @@ export function CartContextProvider({ children }) {
   }
 
   function removeFromCart(itemId) {
-    setCart((prevCart) => prevCart.filter((item) => item.id !== itemId));
-    toast.error("Producto eliminado del carrito");
+    swal({
+      title: "¿Estás seguro?",
+      text: "Una vez eliminado, deberas volver a agregarlo.",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        setCart((prevCart) => prevCart.filter((item) => item.id !== itemId));
+        toast.error("Producto eliminado del carrito");
+      }
+    });
   }
 
-  function clearCart() {
-    setCart([]);
-    toast.error("Carrito vaciado");
+  function clearCart(props) {
+    if (props === "fromCheckout") {
+      setCart([]);
+      return;
+    }
+    swal({
+      title: "¿Estás seguro?",
+      text: "Una vez vaciado, deberas volver a agregar los productos.",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        setCart([]);
+        toast.error("Carrito vaciado");
+      }
+    });
   }
 
   function getTotalItems() {
