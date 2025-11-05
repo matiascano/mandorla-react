@@ -57,7 +57,15 @@ export async function getPuntosVenta() {
   const puntosRef = collection(db, "puntosVenta");
   const puntosSnap = await getDocs(puntosRef);
   const puntosList = puntosSnap.docs.map((doc) => {
-    return { id: doc.id, ...doc.data() };
+    const data = doc.data();
+    return {
+      id: doc.id,
+      nombre: data.nombre,
+      direccion: data.direccion,
+      position: data.position
+        ? [data.position.latitude, data.position.longitude]
+        : null, // asegurar formato correcto
+    };
   });
   return puntosList;
 }

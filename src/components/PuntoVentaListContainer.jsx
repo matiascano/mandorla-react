@@ -1,19 +1,17 @@
 import "./PuntoVentaListContainer.css";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 import { BounceLoader } from "react-spinners";
 import { getPuntosVenta } from "../services/FirestoreService";
-import PuntoVenta from "./PuntoVenta";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
 
 function PuntoVentaListContainer() {
   const [puntosVenta, setPuntosVenta] = useState([]);
   const [loading, setLoading] = useState(true);
-  const { regionId } = useParams();
 
   useEffect(() => {
     setLoading(true);
-
-    getPuntosVenta(regionId)
+    getPuntosVenta()
       .then((data) => {
         setPuntosVenta(data);
         setLoading(false);
@@ -23,36 +21,45 @@ function PuntoVentaListContainer() {
         setPuntosVenta([]);
         setLoading(false);
       });
-  }, [regionId]);
+  }, []);
 
   if (loading) {
     return (
-      <div>
+      <div className="loader">
         <BounceLoader />
       </div>
     );
   }
 
-  if (puntosVenta.length === 0) {
-    return <p>No se encontraron puntos de venta.</p>;
-  }
+  const positionDefault = [-38.0055, -57.5426]; // centro de Mar del Plata
 
   return (
-    <>
+    <div className="punto-venta-list-container">
       <h2>Puntos de Venta</h2>
-      <div className="punto-venta-list">
-        {puntosVenta.map((punto) => (
-          <PuntoVenta
-            key={punto.id}
-            nombre={punto.nombre}
-            direccion={punto.direccion}
-            telefono={punto.telefono}
-            horario={punto.horario}
-            link={punto.link}
-          />
-        ))}
-      </div>
-    </>
+      <MapContainer
+        center={positionDefault}
+        zoom={12}
+        style={{ height: "500px", width: "100%" }}
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+
+        {puntosVenta.map(
+          (punto) =>
+            punto.position && (
+              <Marker key={punto.id} position={punto.position}>
+                <Popup>
+                  <strong>{punto.nombre}</strong>
+                  <br />
+                  {punto.direccion}
+                </Popup>
+              </Marker>
+            )
+        )}
+      </MapContainer>
+    </div>
   );
 }
 
