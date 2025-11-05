@@ -1,4 +1,3 @@
-import "./CheckoutForm.css";
 import { useState } from "react";
 
 export default function CheckoutForm(props) {
@@ -35,7 +34,7 @@ export default function CheckoutForm(props) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h3>Ingresá tus datos</h3>
+      <h4>Ingresá tus datos</h4>
       <div>
         <label htmlFor="name">Nombre:</label>
         <input
@@ -82,7 +81,7 @@ export default function CheckoutForm(props) {
       </div>
       <button type="submit">Confirmar</button>
       <button type="button" onClick={clearForm}>
-        Limpiar
+        Borrar datos del formulario
       </button>
     </form>
   );

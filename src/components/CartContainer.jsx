@@ -35,35 +35,39 @@ function CartContainer() {
         <p>No hay productos en el carrito.</p>
       ) : (
         <>
-          <ul>
-            {cart.map((item) => (
-              <li className="cartRow" key={item.id}>
-                <img src={item.image} alt={item.title} />
-                <div className="cartData">
-                  <h3>{item.title}</h3>
-                  <p>Cantidad: {item.quantity}</p>
-                  <p>Precio unitario: ${item.price}</p>
-                </div>
-                <div className="total">
-                  <button onClick={() => removeFromCart(item.id)}>x</button>
-                  <p>Total: ${item.price * item.quantity} </p>
-                </div>
-              </li>
-            ))}
-          </ul>
-          <div className="cart-summary">
-            <p>Total de productos: {getTotalItems()}</p>
-            <p>Precio total: ${getTotalPrice()}</p>
+          <div className="cart-wrapper">
+            <div className="left-cart">
+              <h3>Productos</h3>
+              <ul>
+                {cart.map((item) => (
+                  <li className="cartRow" key={item.id}>
+                    <img src={item.image} alt={item.title} />
+                    <div className="cartData">
+                      <h3>{item.title}</h3>
+                      <p>Cantidad: {item.quantity}</p>
+                      <p>Precio unitario: ${item.price}</p>
+                    </div>
+                    <div className="total">
+                      <button onClick={() => removeFromCart(item.id)}>x</button>
+                      <p>Total: ${item.price * item.quantity} </p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+              <div className="cart-summary">
+                <p>Total de productos: {getTotalItems()}</p>
+                <p>Precio total: ${getTotalPrice()}</p>
+              </div>
+              <div className="cart-actions">
+                <button onClick={clearCart}>Vaciar Carrito</button>
+              </div>
+            </div>
+            <div className="right-cart">
+              <h3>Realizar Pedido</h3>
+              <p>Completa el formulario para finalizar tu compra.</p>
+              <CheckoutForm handleCheckout={handleCheckout} />
+            </div>
           </div>
-        </>
-      )}
-      {cart.length > 0 && (
-        <>
-          <div className="cart-actions">
-            <button onClick={clearCart}>Vaciar Carrito</button>
-            <button onClick={handleCheckout}>Finalizar Compra</button>
-          </div>
-          <CheckoutForm handleCheckout={handleCheckout} />
         </>
       )}
     </div>
